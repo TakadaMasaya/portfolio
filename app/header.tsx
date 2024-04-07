@@ -21,7 +21,7 @@ export default function Header() {
       <NavbarContent justify="start" className='hidden sm:flex gap-4'>
         {PATHS.map(({ href, label }) =>
           <NavbarItem key={href}>
-            <Link href={href} target='_blank'>{label}</Link>
+            <Link href={href}>{label}</Link>
           </NavbarItem>
         )}
       </NavbarContent>
