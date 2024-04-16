@@ -1,7 +1,10 @@
+'use client'
+
 import React from 'react'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { TbMenu2 as MenuHamburger } from "react-icons/tb";
 import Link from 'next/link';
 
 const PATHS: { href: string, label: string }[] = [
@@ -17,7 +20,11 @@ const LINKS = [
 export default function Header() {
   return (
     <Navbar>
-      <NavbarBrand>たかだ</NavbarBrand>
+      <NavbarBrand>
+        <Link href='/'>
+          たかだ
+        </Link>
+      </NavbarBrand>
       <NavbarContent justify="start" className='hidden sm:flex gap-4'>
         {PATHS.map(({ href, label }) =>
           <NavbarItem key={href}>
@@ -34,6 +41,22 @@ export default function Header() {
         )}
       </NavbarContent>
 
+      <NavbarContent justify='end' className='sm:hidden'>
+        <Dropdown>
+          <DropdownTrigger>
+            <Button isIconOnly>
+              <MenuHamburger fontSize={24} />
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu aria-label='header menu'>
+            {PATHS.map(({ href, label }) =>
+              <DropdownItem key={href} href={href}>
+                {label}
+              </DropdownItem>
+            )}
+          </DropdownMenu>
+        </Dropdown>
+      </NavbarContent>
     </Navbar>
   )
 }
