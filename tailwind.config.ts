@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        darkgray: "#f97316",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -18,6 +21,69 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          // NextUI側のカラー定義カスタマイズ
+          colors: {
+            default: {
+              DEFAULT: "#ffffff",
+              foreground: "#ffffff",
+            },
+            primary: {
+              DEFAULT: "#EFAA52",
+              foreground: "#ffffff",
+            },
+            secondary: {
+              DEFAULT: "#E7CC8F",
+              foreground: "#ffffff",
+            },
+            success: {
+              DEFAULT: "#008000",
+              foreground: "#ffffff",
+            },
+            warning: {
+              DEFAULT: "#F8F3E6",
+              foreground: "#ffffff",
+            },
+            danger: {
+              DEFAULT: "#b22222",
+              foreground: "#ffffff",
+            },
+          },
+        },
+        dark: {
+          colors: {
+            default: {
+              DEFAULT: "#000000",
+              foreground: "#282828",
+            },
+            primary: {
+              DEFAULT: "#6C4F70",
+              foreground: "#282828",
+            },
+            secondary: {
+              DEFAULT: "#757081",
+              foreground: "#282828",
+            },
+            success: {
+              DEFAULT: "#193446",
+              foreground: "#282828",
+            },
+            warning: {
+              DEFAULT: "#ffffff",
+              foreground: "#282828",
+            },
+            danger: {
+              DEFAULT: "#AB3E16",
+              foreground: "#282828",
+            },
+          },
+        },
+
+      }
+    }
+    )],
 };
 export default config;

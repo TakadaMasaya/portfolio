@@ -6,6 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { TbMenu2 as MenuHamburger } from "react-icons/tb";
 import Link from 'next/link';
+import { ThemeSwitcher } from './common/components/ThemeSwitcher';
 
 const PATHS: { href: string, label: string }[] = [
   { href: 'about', label: 'about' },
@@ -57,6 +58,7 @@ export default function Header() {
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
+      <ThemeSwitcher />
     </Navbar>
   )
 }
