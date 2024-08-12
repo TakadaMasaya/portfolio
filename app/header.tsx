@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const PATHS: { href: string, label: string }[] = [
   { href: 'about', label: 'about' },
-  { href: 'post', label: 'blog' },
+  { href: 'blog', label: 'blog' },
 ]
 
 const LINKS = [
