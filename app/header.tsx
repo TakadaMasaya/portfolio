@@ -20,7 +20,7 @@ const LINKS = [
 
 export default function Header() {
   return (
-    <header className="w-full max-w-2xl bg-background text-foreground dark">
+    <header className="w-full max-w-2xl bg-background px-4 pb-8 text-foreground dark">
       <div className="flex justify-between pb-3 pt-10 align-bottom">
         <div className="flex flex-col justify-center gap-2">
           <h1 className="text-2xl font-bold">たかだ まさや</h1>
@@ -35,9 +35,7 @@ export default function Header() {
         <Image src="/portrait.jpg" alt="portrait" className="w-24" />
       </div>
       <div>
-        <p>
-          Webフロントエンドエンジニアです。業務の自動化や効率化に興味があります。
-        </p>
+        <p>Webフロントエンドエンジニアです。業務の自動化や効率化に興味があります。</p>
         <p>普段はReactやTypeScriptを用いた開発をしています。</p>
       </div>
     </header>
