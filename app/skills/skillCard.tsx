@@ -30,13 +30,15 @@ function SkillCard({ title, icon, selected, onPress }: PropTypes) {
       >
         <div className="flex items-center">
           <div className="size-8">{icon}</div>
-          <motion.div
-            initial={INITIAL_ANIMATE}
-            animate={hoverd ? ANIMATE : INITIAL_ANIMATE}
-            className="whitespace-nowrap"
-          >
-            {title}
-          </motion.div>
+          <span className="hidden sm:block">
+            <motion.div
+              initial={INITIAL_ANIMATE}
+              animate={hoverd ? ANIMATE : INITIAL_ANIMATE}
+              className="whitespace-nowrap"
+            >
+              {title}
+            </motion.div>
+          </span>
         </div>
       </CardBody>
     </Card>
