@@ -24,11 +24,11 @@ export default function RootLayout({
     <html lang="ja">
       <body className={inter.className}>
         <UiProvider>
-          <div className="grid h-full min-h-dvh grid-rows-[auto_1fr_auto] pb-16 sm:grid-cols-[1fr_auto_1fr] sm:grid-rows-[1fr]">
+          <div className="grid min-h-dvh sm:grid-cols-[1fr_auto_1fr]">
             <div></div>
-            <div className="max-w-screen-sm border-x-1 border-x-gray-700">
+            <div className="max-w-screen-sm border-x-1 border-x-gray-700 sm:w-unit-9xl">
               <Header />
-              <main className="grid place-items-center bg-background text-foreground dark">
+              <main className="grid place-items-center bg-background pb-48 text-foreground dark">
                 <ContentTabs />
                 {children}
               </main>
