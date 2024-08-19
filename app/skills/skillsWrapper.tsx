@@ -1,6 +1,6 @@
 'use client'
 
-import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react'
+import { Card, CardBody, CardHeader } from '@nextui-org/react'
 import { useState } from 'react'
 import { SkillItem } from './consts/skills'
 import SkillCard from './skillCard'
@@ -30,12 +30,17 @@ export default function SkillsWrapper({ title, skills }: PropTypes) {
         <CardHeader>
           <h3 className="flex items-center gap-2 text-lg font-semibold">
             <div className="size-6">{skills[selectedIndex].icon}</div>
-            <Divider orientation="vertical" className="h-6" />
             {skills[selectedIndex].title}
           </h3>
         </CardHeader>
-        <Divider />
-        <CardBody>{skills[selectedIndex].body}</CardBody>
+        <CardBody>
+          <p className="text-justify indent-4 leading-relaxed tracking-wide">
+            {skills[selectedIndex].body}
+          </p>
+          {skills[selectedIndex].subBody && (
+            <p className="pt-2 text-xs text-gray-500">{skills[selectedIndex].subBody}</p>
+          )}
+        </CardBody>
       </Card>
     </div>
   )
