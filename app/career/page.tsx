@@ -21,7 +21,7 @@ export default function Career() {
             key={i}
             title={<div className="text-base">{title}</div>}
             subtitle={`${year}年 ${month}月`}
-            startContent={START_CONTENT.get(careerType)}
+            startContent={<div className="text-primary">{START_CONTENT.get(careerType)}</div>}
           >
             <div>
               {content.map((paragraph, j) => (
