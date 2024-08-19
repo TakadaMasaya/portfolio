@@ -12,7 +12,7 @@ export type SkillItem = {
   subBody?: string
 }
 
-const iconClass = 'size-[length:inherit]'
+const iconClass = 'size-[inherit]'
 
 export const PROGRAM_SKILLS: SkillItem[] = [
   {
@@ -25,7 +25,7 @@ export const PROGRAM_SKILLS: SkillItem[] = [
     title: 'React',
     icon: <FaReact className={iconClass} />,
     body: '業務で使用しています。適切な粒度でのコンポーネント設計や、メモ化によるパフォーマンス改善など、基本的なアプリケーション開発が可能です。社内のReact力を上げるべく、公式ドキュメントの輪読会を主催しています。残念ながら業務でテストを書いた経験が無いため、現在学習中です。',
-    subBody: 'コンポーネントは細かく分ければいいってもんじゃない？',
+    subBody: 'SRPに基づいた設計を...！',
   },
   {
     title: 'Redux',
@@ -60,7 +60,6 @@ export const OTHER_SKILLS: SkillItem[] = [
     title: 'GitHub',
     icon: <FaGithub className={iconClass} />,
     body: '業務で使用しています。Issue, Pull Request など基本的な機能はもちろん、Actions や Projects をチームに導入した経験があります。Actions では、デプロイの自動化やブランチマージの自動化などを行いました。',
-    subBody: '多機能',
   },
   {
     title: 'Slack',
