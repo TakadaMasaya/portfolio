@@ -121,6 +121,12 @@ export const CAREER = [
     careerType: CAREER_TYPE.project,
     startYearMonth: [2022, 6],
   },
+  {
+    title: '基本情報技術者試験 合格',
+    content: ['初めて受験した基本情報技術者試験に合格。'],
+    careerType: CAREER_TYPE.other,
+    startYearMonth: [2024, 4],
+  },
 ]
   .sort((a, b) => b.startYearMonth[1] - a.startYearMonth[1])
   .sort((a, b) => b.startYearMonth[0] - a.startYearMonth[0]) as CareerItem[]
