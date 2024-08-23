@@ -28,7 +28,7 @@ export default function RootLayout({
             <div></div>
             <div className="max-w-screen-sm border-x-1 border-x-gray-700 sm:w-unit-9xl">
               <Header />
-              <main className="grid place-items-center bg-background pb-48 text-foreground dark">
+              <main className="grid w-full place-items-center bg-background pb-48 text-foreground dark">
                 <ContentTabs />
                 {children}
               </main>

@@ -24,6 +24,18 @@ export const PROGRAM_SKILLS: SkillItem[] = [
     subBody: '.js ファイルでは手が震えてしまいます',
   },
   {
+    title: 'TypeScript',
+    icon: <BiLogoTypescript className={iconClass} />,
+    body: '業務での使用経験があります。ユーティリティ型などの基本的な型を使いこなし、アプリケーション開発を型安全に進めることができます。',
+    subBody: '.js ファイルでは手が震えてしまいます',
+  },
+  {
+    title: 'TypeScript',
+    icon: <BiLogoTypescript className={iconClass} />,
+    body: '業務での使用経験があります。ユーティリティ型などの基本的な型を使いこなし、アプリケーション開発を型安全に進めることができます。',
+    subBody: '.js ファイルでは手が震えてしまいます',
+  },
+  {
     title: 'React',
     icon: <FaReact className={iconClass} />,
     body: '業務での使用経験があります。適切な粒度でのコンポーネント設計や、フックを用いたパフォーマンス改善など、基本的なアプリケーション開発が可能です。社内のReact力を上げるべく、公式ドキュメントの輪読会を主催しています。残念ながら業務でテストを書いた経験が無いため、現在学習中です。',
