@@ -14,9 +14,9 @@ export default function SkillsWrapper({ title, skills }: PropTypes) {
   const [selectedIndex, setSelectedIndex] = useState<number>(0)
 
   return (
-    <div className="mb-2 w-full px-4 py-2">
+    <div className="mb-2 w-full overflow-hidden px-4 py-2">
       <h2 className="pb-4 text-xl font-bold">{title}</h2>
-      <div className="flex flex-wrap items-center justify-between gap-1 pb-2 sm:justify-start">
+      <div className="scrollbar box-border flex w-full justify-start gap-1 overflow-x-scroll">
         {skills.map((obj, i) => (
           <SkillCard
             key={i}

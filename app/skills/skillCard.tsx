@@ -17,31 +17,33 @@ function SkillCard({ title, icon, selected, onPress }: PropTypes) {
   const [hoverd, setHoverd] = useState<boolean>(false)
 
   return (
-    <Card
-      key={title}
-      onMouseEnter={() => setHoverd(true)}
-      onMouseLeave={() => setHoverd(false)}
-      isPressable
-      onPress={onPress}
-    >
-      <CardBody
-        data-selected={selected}
-        className="overflow-hidden data-[selected=true]:text-primary"
+    <div>
+      <Card
+        key={title}
+        onMouseEnter={() => setHoverd(true)}
+        onMouseLeave={() => setHoverd(false)}
+        isPressable
+        onPress={onPress}
       >
-        <div className="flex items-center">
-          <div className="size-8">{icon}</div>
-          <span className="hidden sm:block">
-            <motion.div
-              initial={INITIAL_ANIMATE}
-              animate={hoverd ? ANIMATE : INITIAL_ANIMATE}
-              className="whitespace-nowrap"
-            >
-              {title}
-            </motion.div>
-          </span>
-        </div>
-      </CardBody>
-    </Card>
+        <CardBody
+          data-selected={selected}
+          className="overflow-hidden data-[selected=true]:text-primary"
+        >
+          <div className="flex items-center">
+            <div className="size-8">{icon}</div>
+            <span className="hidden sm:block">
+              <motion.div
+                initial={INITIAL_ANIMATE}
+                animate={hoverd ? ANIMATE : INITIAL_ANIMATE}
+                className="whitespace-nowrap"
+              >
+                {title}
+              </motion.div>
+            </span>
+          </div>
+        </CardBody>
+      </Card>
+    </div>
   )
 }
 
