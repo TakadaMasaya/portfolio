@@ -1,7 +1,7 @@
 import { MicroCMSDate } from 'microcms-js-sdk'
-import { microCmsClient } from '../microCmsClient'
+import { microCmsClient, SkillsEndPoint } from '../microCmsClient'
 import SkillsWrapper from './skillsWrapper'
-import { SkillItem, SkillsEndPoint } from './types/skillTypes'
+import { SkillItem } from './types/skillTypes'
 
 type Contents = (MicroCMSDate & SkillItem)[]
 
