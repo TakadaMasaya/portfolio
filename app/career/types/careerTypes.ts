@@ -9,6 +9,7 @@ export type CareerItem = {
   title: string
   content: string
   careerType: [CareerType]
-  startDate: Date
-  endDate?: Date
+  startDate: string
+  endDate?: string
+  isActive?: boolean
 }
