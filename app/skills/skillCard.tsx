@@ -2,8 +2,9 @@
 
 import { Card, CardBody } from '@nextui-org/react'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { SkillItem } from './consts/skills'
+import Image from 'next/image'
+import { memo, useState } from 'react'
+import { SkillItem } from './types/skillTypes'
 
 type PropTypes = SkillItem & {
   selected: boolean
@@ -19,7 +20,6 @@ function SkillCard({ title, icon, selected, onPress }: PropTypes) {
   return (
     <div>
       <Card
-        key={title}
         onMouseEnter={() => setHoverd(true)}
         onMouseLeave={() => setHoverd(false)}
         isPressable
@@ -27,10 +27,17 @@ function SkillCard({ title, icon, selected, onPress }: PropTypes) {
       >
         <CardBody
           data-selected={selected}
-          className="overflow-hidden data-[selected=true]:text-primary"
+          className="overflow-hidden bg-primary-800 text-slate-950 opacity-90 data-[selected=true]:bg-primary-300 data-[selected=true]:text-slate-50 data-[selected=true]:opacity-100"
         >
           <div className="flex items-center">
-            <div className="size-8">{icon}</div>
+            <Image
+              src={icon}
+              alt={`${title}のアイコン画像`}
+              height={28}
+              width={28}
+              data-selected={selected}
+              className=""
+            />
             <span className="hidden sm:block">
               <motion.div
                 initial={INITIAL_ANIMATE}
@@ -47,4 +54,4 @@ function SkillCard({ title, icon, selected, onPress }: PropTypes) {
   )
 }
 
-export default SkillCard
+export default memo(SkillCard)

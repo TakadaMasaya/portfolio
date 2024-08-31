@@ -1,14 +1,11 @@
-'use client'
-
-import { OTHER_SKILLS, PROGRAM_SKILLS, WORK_SKILLS } from './consts/skills'
-import SkillsWrapper from './skillsWrapper'
+import { MICRO_CMS_END_POINT } from '../microCmsClient'
+import SkillsProvider from './skillsProvider'
 
 export default function Skills() {
   return (
     <>
-      <SkillsWrapper title="フロントエンド" skills={PROGRAM_SKILLS} />
-      <SkillsWrapper title="周辺ツール" skills={WORK_SKILLS} />
-      <SkillsWrapper title="その他" skills={OTHER_SKILLS} />
+      <SkillsProvider title="フロントエンド" endpoint={MICRO_CMS_END_POINT.program_skills} />
+      <SkillsProvider title="周辺ツール" endpoint={MICRO_CMS_END_POINT.work_skills} />
     </>
   )
 }
