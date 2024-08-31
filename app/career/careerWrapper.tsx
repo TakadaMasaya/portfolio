@@ -22,7 +22,10 @@ export default function CareerWrapper({ contents }: PropTypes) {
               <div className="text-primary">{CAREER_START_ICON.get(careerType[0])}</div>
             }
           >
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: content }}
+              className='[&_p]:indent-4 [&_ul]:pl-8 [&_ul]:list-disc' 
+            />
           </AccordionItem>
         )
       })}
