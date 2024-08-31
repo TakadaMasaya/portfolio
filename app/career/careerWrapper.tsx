@@ -33,7 +33,7 @@ export default function CareerWrapper({ contents }: PropTypes) {
 }
 
 const getStartContent = (careerType: CareerType) => (
-  <div className="text-primary">{CAREER_START_ICON.get(careerType[0])}</div>
+  <div className="text-primary">{CAREER_START_ICON.get(careerType)}</div>
 )
 
 const getYearMonth = (dateStr: string) => {
