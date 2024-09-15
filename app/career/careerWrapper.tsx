@@ -39,7 +39,7 @@ const getStartContent = (careerType: CareerType) => (
 const getYearMonth = (dateStr: string) => {
   const date = new Date(dateStr)
   const year = date.getFullYear()
-  const month = date.getMonth()
+  const month = date.getMonth() + 1
 
   return `${year}年${month}月`
 }
