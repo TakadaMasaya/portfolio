@@ -1,22 +1,30 @@
 # ポートフォリオ
 
 [TakadaMasaya](https://github.com/TakadaMasaya) のポートフォリオのリポジトリです。  
-URL: https://takada-masaya.dev
-Next.js, NextUIで主に開発を行なっており、Vercelでホスティング、microCMSでコンテンツ管理を行なっています。
+URL: https://takada-masaya.dev  
 
-# 開発環境の構築
+# 開発環境
 
-## リポジトリのセットアップ
+## 使用技術
+- 開発: Next.js, NextUI, TailwindCSS
+- ホスティング: Vercel
+- コンテンツ管理: microCMS
+
+## 開発環境のセットアップ
+
+### パッケージのインストール
 
 ```bash
-git clone {this repository}
 npm i
-touch .env.local
 ```
 
-## APIキーの設定
+### APIキーの設定
 
-CMSとしてmicroCMSを使用しており、そのAPIキーなどの設定をenvファイルで行なっている。
+microCMSのAPIキーなどの設定をenvファイルで行なっている。
+
+```bash
+touch .env.local
+```
 
 1. プロジェクトルートの [.env.local.example](.env.local.example) の内容をコピー
 2. プロジェクトルートの .env.local に1でコピーした内容をペースト
