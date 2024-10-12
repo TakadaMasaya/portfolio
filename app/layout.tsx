@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react'
+import { Analytics } from '@vercel/analytics/react'
 
 import ContentTabs from './contentTabs'
 import Footer from './footer'
@@ -37,6 +38,7 @@ export default function RootLayout({
             <div></div>
           </div>
         </UiProvider>
+        <Analytics />
       </body>
     </html>
   )
